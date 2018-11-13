@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Basic Landing Page</title>
+  <title>NYC Official Guide</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+  <link rel="icon" type="image/png" href="./img/favicon.png" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav class="header">
+      <img src="./img/logo.png" alt="Logo" style="width: 40px; float: left;">
       <a href="#default" class="logo">NYC Official Guide</a>
       <div class="header-left">
         <a class="active underline" href="#home">Home</a>
@@ -19,14 +21,22 @@
       </div>
       <div class="header-right">
         <h4 class="name">Nikita</h4>
-        <img src="./img/profile.jpg" alt="Profile picture" class="profile">
+        <div class="dropdown">
+          <img src="./img/profile.jpg" alt="Profile picture" class="profile">
+          <div class="dropdown-content">
+            <a href="#">Bio</a>
+            <a href="#">Edit Profile</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
 
   <div style="padding:20px 20px 0 20px; text-align: center;">
     <h1>Best Things To Do in New York City</h1>
-    <p>Even if you're not mesmerized by the city's soaring skyscrapers and monuments,
+    <p>
+      Even if you're not mesmerized by the city's soaring skyscrapers and monuments,
       you'll be blown away by its flourishing arts, food, fashion and nightlife scenes.
       You can spend your morning browsing Fifth Avenue's designer racks and your afternoon
       catching stunning city views from the Top of the Rock Observation Deck.
@@ -34,10 +44,32 @@
       at the Met and the Guggenheim before feasting on ethnic fare in Chinatown or Little Italy.
       If you still have some energy (and cash) left over,
       don't miss the chance to snag tickets to an award-winning Broadway show or hop over to one of the low-key
-      rooftop bars and jazz clubs illuminating the Meatpacking District after dark. How we rank Things to Do.</p>
+      rooftop bars and jazz clubs illuminating the Meatpacking District after dark. How we rank Things to Do.
+    </p>
   </div>
-  <div class="container">
-      <img src="./img/nyc.jpg" alt="Norway" style="width:100%;">
+
+  <!-- Tab links -->
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Brooklyn')" id="defaultOpen">Brooklyn Bridge</button>
+    <button class="tablinks" onclick="openCity(event, 'Central')">Central Park</button>
+    <button class="tablinks" onclick="openCity(event, 'Empire')">Empire State Building</button>
+  </div>
+  
+  <!-- Tab content -->
+  <div id="Brooklyn" class="tabcontent">
+    <div class="content-tab">
+      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+      <h3>Brooklyn Bridge</h3>
+      <p>
+        Some visitors decide to skip the bridge in favor of other attractions,
+        but if you're short on money, this truly is one of the best ways to experience
+        the city and to get a unique view of either borough. You can take the A or C train
+        to the High Street stop in Brooklyn and stroll along the bridge back to Manhattan.
+        It takes about 30 minutes to walk from one side to the other, and it's free to visit.
+      </p>
+    </div>
+    <div class="container">
+      <img src="./img/nyc.jpg" alt="Brooklyn Bridge" style="width:100%;">
       <div class="text-block"> 
         <h4>Brooklyn Bridge</h4>
         <p>
@@ -48,6 +80,71 @@
         </p>
       </div>
     </div>
+  </div>
+
+  <div id="Central" class="tabcontent">
+    <div class="content-tab">
+      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+      <h3>Central Park</h3>
+      <p>
+        This part-park, part-museum, part-concert hall swallows central Manhattan,
+        and many of the city's most notable attractions are situated next to it
+        or within its limits (the Guggenheim, the Metropolitan Museum of Art and
+        the American Museum of Natural History, to name a few).
+        But travelers insist that you shouldn't just pass through Central Park
+        on your way to another place. This 843-acre green space is a favorite of
+        New Yorkers and tourists; you can come here to exercise, dine, go to the zoo and more.</p>
+    </div>
+    <div class="container">
+      <img src="./img/central.jpg" alt="Central Park" style="width:100%;">
+      <div class="text-block"> 
+        <h4>Central Park</h4>
+        <p> 
+          “Central Park is fantastic year-round,and is a must-see for anyone<br>
+          coming to New York," says Josephine Danielson,head concierge at the<br>
+          Four Seasons Hotel New York. "People may not realize Central Park<br>
+          has several hidden treasures. If you’re looking for something<br>
+          different, I tell guests to visit the Conservatory Garden." 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="Empire" class="tabcontent">
+    <div class="content-tab">
+      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+      <h3>Empire State Building</h3>
+      <p>
+        New York City Tourist 101 dictates that you must swing by this landmark structure in
+        midtown Manhattan. And despite the hefty admission fees, the crowds and the long lines,
+        recent visitors insist that you won't be sorry. In fact, taking a trip to the top of
+        the Empire State Building is either the perfect way to begin or end your Big Apple
+        excursion – on a clear day you'll be able to the see the city's major highlights some
+        1,050 feet beneath you. Pick up the multimedia tour, available in eight languages,
+        which guides visitors through the icon's exhibits and views with additional background
+        on the building's history. The tour is included in the admission price and
+        given to guests to enhance their visit.
+      </p>
+    </div>
+    <div class="container">
+      <img src="./img/empire.jpg" alt="Empire State Building" style="width:100%;">
+      <div class="text-block"> 
+        <h4>Empire State Building</h4>
+        <p>
+          Looking up at the art deco skyscraper from the ground is also pretty spectacular,<br>
+          especially in the evenings when there's a little mood lighting. The Empire State<br>
+          Building's tower lights have maintained a tradition of changing color to recognize<br>
+          various occasions and organizations throughout the year since 1976. In 2012, its<br>
+          iconic tower lighting system was modernized by replacing its flood lights with a<br>
+          dynamic lighting system unique to the Empire State Building, with more than 16<br>
+          million colors in limitless combinations and effects. The Empire State Building<br>
+          stages dazzling light shows celebrating holidays and events, often synchronized<br>
+          to music broadcast simultaneously on iHeartMedia's radio stations.
+        </p>
+      </div>
+    </div>
+  </div>
+  
 
   <footer class="footer">
     <p>Made with 💚 by Nikita Vasilev.</p>
@@ -60,5 +157,6 @@
       </a>
     </div>
   </footer>
+  <script src="./js/main.js"></script>
 </body>
 </html>
